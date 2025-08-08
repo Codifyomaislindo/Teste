@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 255 255 255;
+  --fg: 9 9 11;
+}
+html.dark {
+  --bg: 9 9 11;
+  --fg: 244 244 245;
+}
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--fg));
+}
+.container {
+  @apply max-w-6xl mx-auto px-4;
+}
+.card {
+  @apply rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950;
+}
+.btn {
+  @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium border border-transparent transition;
+}
+.btn-primary {
+  @apply bg-fuchsia-600 text-white hover:bg-fuchsia-700;
+}
+.btn-secondary {
+  @apply bg-zinc-100 text-zinc-900 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700;
+}
+.badge {
+  @apply inline-flex items-center text-xs rounded-full px-2 py-1 bg-zinc-100 dark:bg-zinc-800;
+}
+.link {
+  @apply text-fuchsia-600 hover:underline;
+}
+img { display:block; max-width:100%; height:auto; }
